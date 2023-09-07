@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{47E704CA-1594-40BC-9C2D-E5B277C10B87}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <RootNamespace>RimPLD</RootNamespace>
+        <AssemblyName>RimPLD</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <NoWin32Manifest>False</NoWin32Manifest>
+        <NoStdLib>False</NoStdLib>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <DebugType>None</DebugType>
+        <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+        <TargetFrameworkProfile />
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <Optimize>True</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <ConsolePause>false</ConsolePause>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <Prefer32Bit>false</Prefer32Bit>
+        <DebugType>portable</DebugType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <Optimize>True</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <ConsolePause>false</ConsolePause>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DefineConstants>DEBUG;</DefineConstants>
+        <BaseIntermediateOutputPath>obj\Debug\</BaseIntermediateOutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <BaseIntermediateOutputPath>obj\Release\</BaseIntermediateOutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+        <BaseAddress>4194304</BaseAddress>
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <RegisterForComInterop>False</RegisterForComInterop>
+        <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+        <FileAlignment>4096</FileAlignment>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="src\RimPLD.cs" />
+        <Compile Include="src\Building_PLD.cs" />
+        <Compile Include="src\ITab_PLD.cs" />
+        <Compile Include="src\CompPLD.cs" />
+        <Compile Include="src\CompProperties_PLD.cs" />
+        <Compile Include="src\PlaceWorker_PLD.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+    <ItemGroup>
+        <Reference Include="0Harmony, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>lib\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp, Version=1.1.7384.32726, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>lib\Assembly-CSharp.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System">
+            <HintPath>lib\System.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+        <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>lib\UnityEngine.IMGUIModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>lib\UnityEngine.TextRenderingModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>lib\UnityEngine.InputLegacyModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <Target Name="AfterBuild">
+        <Copy SourceFiles="$(OutDir)\RimPLD.dll" DestinationFolder="..\1.4\Assemblies"/>
+        <Copy SourceFiles="$(OutDir)\0Harmony.dll" DestinationFolder="..\1.4\Assemblies"/>
+    </Target>
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimPLD</name>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <packageId>name.bizna.rimworld.RimPLD</packageId>
+  <author>Solra Bizna</author>
+  <description>A programmable logic device for RimWorld. Perform simple logic operations compactly and reliably. One simple use case is to automatically turn a generator on and off based on battery status.
+
+Select up to three input sources A/B/C (which are available inverted and non-inverted), provide up to three outputs X/Y/Z. Internally, it has eight AND gates, three OR gates, and an SR latch. The state of the SR latch acts as a fourth input, and can also control output X.
+
+This is not meant as a full replacement for PowerLogic. It *can* replace PowerLogic for many uses.
+
+(Players of SHENZHEN I/O may find that the RimPLD bears a suspicious resemblance to the PGA33x6 from SHENZHEN I/O. If you ever looked at the PGA33x6 and thought "wow, that looks cool, wish I had a use for it", well, now you can do that in RimWorld too.)
+  </description>
+  <modDependencies>
+  </modDependencies>
+</ModMetaData>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+<TabPLD>Logic</TabPLD>
+<RimPLD.I.None>Input: always 0</RimPLD.I.None>
+<RimPLD.I.PowerFlow>Input: net power ≥X W</RimPLD.I.PowerFlow>
+<RimPLD.I.EnergyStore>Input: battery level ≥X Wd</RimPLD.I.EnergyStore>
+<RimPLD.I.Temperature>Input: temperature ≥X°</RimPLD.I.Temperature>
+<RimPLD.I.LightLevel>Input: light level ≥X%</RimPLD.I.LightLevel>
+<RimPLD.I.IsFlickedOn>Input: device is on</RimPLD.I.IsFlickedOn>
+<RimPLD.I.OutputA>Input: PLD output A</RimPLD.I.OutputA>
+<RimPLD.I.OutputB>Input: PLD output B</RimPLD.I.OutputB>
+<RimPLD.I.OutputC>Input: PLD output C</RimPLD.I.OutputC>
+<RimPLD.O.None>Output: unconnected</RimPLD.O.None>
+<RimPLD.O.FlickOff>Output: +edge flicks OFF</RimPLD.O.FlickOff>
+<RimPLD.O.FlickOn>Output: +edge flicks ON</RimPLD.O.FlickOn>
+<RimPLD.O.FlickToggle>Output: +edge flicks</RimPLD.O.FlickToggle>
+<RimPLD.O.Control>Output: control flick</RimPLD.O.Control>
+</LanguageData>
