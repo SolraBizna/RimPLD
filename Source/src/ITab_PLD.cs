@@ -188,7 +188,7 @@ namespace RimPLD {
             /* oh god it's about to get worse!!! */
             dirty = doInputControls(InputLeftEdge, Input1CenterY, pld.inputs[0], notTextureForInput(pld.lastInputs&3)) || dirty;
             dirty = doInputControls(InputLeftEdge, Input1CenterY+BoxStride*2, pld.inputs[1], notTextureForInput((pld.lastInputs>>2)&3)) || dirty;
-            dirty = doInputControls(InputLeftEdge, Input1CenterY+BoxStride*6, pld.inputs[2], notTextureForInput((pld.lastInputs>>2)&3)) || dirty;
+            dirty = doInputControls(InputLeftEdge, Input1CenterY+BoxStride*6, pld.inputs[2], notTextureForInput((pld.lastInputs>>6)&3)) || dirty;
             dirty = doOutputControls(OutputLeftEdge, Output1CenterY, pld.outputs[0]) || dirty;
             dirty = doOutputControls(OutputLeftEdge, Output1CenterY+BoxStride*2, pld.outputs[1]) || dirty;
             dirty = doOutputControls(OutputLeftEdge, Output1CenterY+BoxStride*4, pld.outputs[2]) || dirty;
