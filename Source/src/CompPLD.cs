@@ -330,7 +330,10 @@ namespace RimPLD {
                     }
                 } break;
                 case InputSource.LightLevel:
-                    return map.glowGrid.GameGlowAt(pos, false) * 100f >= input.threshold;
+                    // 1.4
+                    //return map.glowGrid.GameGlowAt(pos, false) * 100f >= input.threshold;
+                    // 1.5
+                    return map.glowGrid.GroundGlowAt(pos) * 100f >= input.threshold;
                 case InputSource.OutputA: {
                     CompPLD pld = pos.GetFirstThingWithComp<CompPLD>(map)?.TryGetComp<CompPLD>();;
                     if(pld != null) {

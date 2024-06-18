@@ -3,6 +3,7 @@
   <name>RimPLD</name>
   <supportedVersions>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
   <packageId>name.bizna.rimworld.RimPLD</packageId>
   <author>Solra Bizna</author>

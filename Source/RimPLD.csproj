@@ -93,7 +93,7 @@
         </Reference>
     </ItemGroup>
     <Target Name="AfterBuild">
-        <Copy SourceFiles="$(OutDir)\RimPLD.dll" DestinationFolder="..\1.4\Assemblies"/>
-        <Copy SourceFiles="$(OutDir)\0Harmony.dll" DestinationFolder="..\1.4\Assemblies"/>
+        <Copy SourceFiles="$(OutDir)\RimPLD.dll" DestinationFolder="..\1.5\Assemblies"/>
+        <Copy SourceFiles="$(OutDir)\0Harmony.dll" DestinationFolder="..\1.5\Assemblies"/>
     </Target>
 </Project>
